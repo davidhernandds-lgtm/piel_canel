@@ -63,7 +63,7 @@ function App() {
   }
 
   return (
-    <div className="h-screen w-full bg-black text-[#f3e5ab] flex flex-col items-center justify-center overflow-hidden font-serif relative">
+    <div className="min-h-screen w-full bg-black text-[#f3e5ab] flex flex-col items-center justify-center overflow-hidden font-serif relative">
       
       {/* Ambiente de fondo */}
       <div className="absolute inset-0 z-0 pointer-events-none opacity-30">
@@ -77,12 +77,12 @@ function App() {
         <div className="text-center z-10 flex flex-col items-center justify-center h-full">
           <button 
             onClick={() => setIsPlaying(true)}
-            className="text-9xl mb-8 text-[#f3e5ab] hover:scale-110 transition-transform duration-300 drop-shadow-[0_0_25px_rgba(243,229,171,0.6)] cursor-pointer"
+            className="text-6xl md:text-9x1 mb-8 text-[#f3e5ab] hover:scale-110 transition-transform duration-300 drop-shadow-[0_0_25px_rgba(243,229,171,0.6)] cursor-pointer"
           >
             ▶
           </button>
           
-          <h1 className="text-5xl md:text-6xl italic font-bold mb-4 text-[#f3e5ab]">
+          <h1 className="text-3xl md:text-5xl 1g:text-6xl italic font-bold mb-4 text-[#f3e5ab]">
             Piel Canela
           </h1>
           <p className="text-xl tracking-widest uppercase opacity-70">Experiencia Karaoke</p>
@@ -110,7 +110,7 @@ function App() {
                       transition={{ duration: 0.6, ease: "easeOut" }}
                       className="w-full flex justify-center py-4" 
                     >
-                      <div className="text-6xl md:text-8xl font-bold leading-tight drop-shadow-[0_0_30px_rgba(243,229,171,0.4)] text-center px-4">
+                      <div className="text-4xl md:text-7xl 1g:text-8xl font-bold leading-tight drop-shadow-[0_0_30px_rgba(243,229,171,0.4)] text-center px-4">
                          <KaraokeLine 
                             text={activeLine.text} 
                             progress={progress} 
@@ -146,7 +146,7 @@ function App() {
                             }}
                             exit={{ opacity: 0, y: -15 }}
                             transition={{ duration: 0.6 }}
-                            className={`font-medium ${offset === 1 ? 'text-3xl' : 'text-2xl'}`}
+                            className={`font-medium ${offset === 1 ? 'text-xl md:text-3xl' : 'text-lg md:text-2xl'}`}
                           >
                               {nextLine.text}
                           </motion.p>
