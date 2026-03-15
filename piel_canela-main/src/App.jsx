@@ -110,7 +110,7 @@ function App() {
                       transition={{ duration: 0.6, ease: "easeOut" }}
                       className="w-full flex justify-center py-4" 
                     >
-                      <div className="text-3xl md:text-7xl 1g:text-8xl font-bold leading-tight drop-shadow-[0_0_30px_rgba(243,229,171,0.4)] text-center px-4 break-words">
+                      <div className="font-bold leading-tight drop-shadow-[0_0_30px_rgba(243,229,171,0.4)] text-center px-4 break-words" style={{ FontSize: "clamp(1.5rem, 6vw, 4rem)" }}> 
                          <KaraokeLine 
                             text={activeLine.text} 
                             progress={progress} 
@@ -119,7 +119,7 @@ function App() {
                     </motion.div>
                   ) : (
                     <motion.span 
-                      initial={{ opacity: 0 }} 
+                      initial={{ opacity: 0 }}
                       animate={{ opacity: 0.5 }}
                       className="text-4xl"
                     >
